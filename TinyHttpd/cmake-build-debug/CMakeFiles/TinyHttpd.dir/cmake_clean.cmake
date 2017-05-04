@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/TinyHttpd.dir/main.c.o"
   "CMakeFiles/TinyHttpd.dir/Rio.c.o"
+  "CMakeFiles/TinyHttpd.dir/util.c.o"
   "TinyHttpd.pdb"
   "TinyHttpd"
 )

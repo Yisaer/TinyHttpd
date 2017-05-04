@@ -3,5 +3,5 @@ project(TinyHttpd)
 
 set(CMAKE_C_STANDARD 99)
 
-set(SOURCE_FILES main.c Rio.c Rio.h dbg.h error.h)
+set(SOURCE_FILES main.c Rio.c Rio.h dbg.h error.h util.c util.h)
 add_executable(TinyHttpd ${SOURCE_FILES})

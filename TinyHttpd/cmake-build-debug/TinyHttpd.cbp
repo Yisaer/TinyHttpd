@@ -97,6 +97,12 @@
 		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/main.c">
 			<Option target="TinyHttpd"/>
 		</Unit>
+		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/util.c">
+			<Option target="TinyHttpd"/>
+		</Unit>
+		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/util.h">
+			<Option target="TinyHttpd"/>
+		</Unit>
 		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

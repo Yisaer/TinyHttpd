@@ -177,6 +177,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/main.c.s
 .PHONY : main.c.s
 
+util.o: util.c.o
+
+.PHONY : util.o
+
+# target to build an object file
+util.c.o:
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/util.c.o
+.PHONY : util.c.o
+
+util.i: util.c.i
+
+.PHONY : util.i
+
+# target to preprocess a source file
+util.c.i:
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/util.c.i
+.PHONY : util.c.i
+
+util.s: util.c.s
+
+.PHONY : util.s
+
+# target to generate assembly for a file
+util.c.s:
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/util.c.s
+.PHONY : util.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... util.o"
+	@echo "... util.i"
+	@echo "... util.s"
 .PHONY : help
 
 
