@@ -177,6 +177,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/main.c.s
 .PHONY : main.c.s
 
+priority_queue.o: priority_queue.c.o
+
+.PHONY : priority_queue.o
+
+# target to build an object file
+priority_queue.c.o:
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/priority_queue.c.o
+.PHONY : priority_queue.c.o
+
+priority_queue.i: priority_queue.c.i
+
+.PHONY : priority_queue.i
+
+# target to preprocess a source file
+priority_queue.c.i:
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/priority_queue.c.i
+.PHONY : priority_queue.c.i
+
+priority_queue.s: priority_queue.c.s
+
+.PHONY : priority_queue.s
+
+# target to generate assembly for a file
+priority_queue.c.s:
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/priority_queue.c.s
+.PHONY : priority_queue.c.s
+
 util.o: util.c.o
 
 .PHONY : util.o
@@ -219,6 +246,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... priority_queue.o"
+	@echo "... priority_queue.i"
+	@echo "... priority_queue.s"
 	@echo "... util.o"
 	@echo "... util.i"
 	@echo "... util.s"

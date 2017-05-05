@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/Rio.c" "/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/CMakeFiles/TinyHttpd.dir/Rio.c.o"
   "/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/main.c" "/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/CMakeFiles/TinyHttpd.dir/main.c.o"
+  "/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/priority_queue.c" "/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/CMakeFiles/TinyHttpd.dir/priority_queue.c.o"
   "/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/util.c" "/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/CMakeFiles/TinyHttpd.dir/util.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
