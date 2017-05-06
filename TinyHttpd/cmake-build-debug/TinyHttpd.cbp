@@ -91,7 +91,28 @@
 		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/dbg.h">
 			<Option target="TinyHttpd"/>
 		</Unit>
+		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/epoll.c">
+			<Option target="TinyHttpd"/>
+		</Unit>
+		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/epoll.h">
+			<Option target="TinyHttpd"/>
+		</Unit>
 		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/error.h">
+			<Option target="TinyHttpd"/>
+		</Unit>
+		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/http.c">
+			<Option target="TinyHttpd"/>
+		</Unit>
+		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/http.h">
+			<Option target="TinyHttpd"/>
+		</Unit>
+		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/http_request.c">
+			<Option target="TinyHttpd"/>
+		</Unit>
+		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/http_request.h">
+			<Option target="TinyHttpd"/>
+		</Unit>
+		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/list.h">
 			<Option target="TinyHttpd"/>
 		</Unit>
 		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/main.c">

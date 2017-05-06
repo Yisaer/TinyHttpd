@@ -4,6 +4,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/TinyHttpd.dir/util.c.o"
   "CMakeFiles/TinyHttpd.dir/priority_queue.c.o"
   "CMakeFiles/TinyHttpd.dir/threadpool.c.o"
+  "CMakeFiles/TinyHttpd.dir/http.c.o"
+  "CMakeFiles/TinyHttpd.dir/http_request.c.o"
+  "CMakeFiles/TinyHttpd.dir/epoll.c.o"
   "TinyHttpd.pdb"
   "TinyHttpd"
 )

@@ -150,6 +150,87 @@ Rio.c.s:
 	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/Rio.c.s
 .PHONY : Rio.c.s
 
+epoll.o: epoll.c.o
+
+.PHONY : epoll.o
+
+# target to build an object file
+epoll.c.o:
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/epoll.c.o
+.PHONY : epoll.c.o
+
+epoll.i: epoll.c.i
+
+.PHONY : epoll.i
+
+# target to preprocess a source file
+epoll.c.i:
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/epoll.c.i
+.PHONY : epoll.c.i
+
+epoll.s: epoll.c.s
+
+.PHONY : epoll.s
+
+# target to generate assembly for a file
+epoll.c.s:
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/epoll.c.s
+.PHONY : epoll.c.s
+
+http.o: http.c.o
+
+.PHONY : http.o
+
+# target to build an object file
+http.c.o:
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/http.c.o
+.PHONY : http.c.o
+
+http.i: http.c.i
+
+.PHONY : http.i
+
+# target to preprocess a source file
+http.c.i:
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/http.c.i
+.PHONY : http.c.i
+
+http.s: http.c.s
+
+.PHONY : http.s
+
+# target to generate assembly for a file
+http.c.s:
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/http.c.s
+.PHONY : http.c.s
+
+http_request.o: http_request.c.o
+
+.PHONY : http_request.o
+
+# target to build an object file
+http_request.c.o:
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/http_request.c.o
+.PHONY : http_request.c.o
+
+http_request.i: http_request.c.i
+
+.PHONY : http_request.i
+
+# target to preprocess a source file
+http_request.c.i:
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/http_request.c.i
+.PHONY : http_request.c.i
+
+http_request.s: http_request.c.s
+
+.PHONY : http_request.s
+
+# target to generate assembly for a file
+http_request.c.s:
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/http_request.c.s
+.PHONY : http_request.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -270,6 +351,15 @@ help:
 	@echo "... Rio.o"
 	@echo "... Rio.i"
 	@echo "... Rio.s"
+	@echo "... epoll.o"
+	@echo "... epoll.i"
+	@echo "... epoll.s"
+	@echo "... http.o"
+	@echo "... http.i"
+	@echo "... http.s"
+	@echo "... http_request.o"
+	@echo "... http_request.i"
+	@echo "... http_request.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

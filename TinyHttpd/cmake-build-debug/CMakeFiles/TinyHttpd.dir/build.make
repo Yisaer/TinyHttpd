@@ -177,13 +177,88 @@ CMakeFiles/TinyHttpd.dir/threadpool.c.o.provides: CMakeFiles/TinyHttpd.dir/threa
 CMakeFiles/TinyHttpd.dir/threadpool.c.o.provides.build: CMakeFiles/TinyHttpd.dir/threadpool.c.o
 
 
+CMakeFiles/TinyHttpd.dir/http.c.o: CMakeFiles/TinyHttpd.dir/flags.make
+CMakeFiles/TinyHttpd.dir/http.c.o: ../http.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/TinyHttpd.dir/http.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/TinyHttpd.dir/http.c.o   -c /Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/http.c
+
+CMakeFiles/TinyHttpd.dir/http.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TinyHttpd.dir/http.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/http.c > CMakeFiles/TinyHttpd.dir/http.c.i
+
+CMakeFiles/TinyHttpd.dir/http.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TinyHttpd.dir/http.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/http.c -o CMakeFiles/TinyHttpd.dir/http.c.s
+
+CMakeFiles/TinyHttpd.dir/http.c.o.requires:
+
+.PHONY : CMakeFiles/TinyHttpd.dir/http.c.o.requires
+
+CMakeFiles/TinyHttpd.dir/http.c.o.provides: CMakeFiles/TinyHttpd.dir/http.c.o.requires
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/http.c.o.provides.build
+.PHONY : CMakeFiles/TinyHttpd.dir/http.c.o.provides
+
+CMakeFiles/TinyHttpd.dir/http.c.o.provides.build: CMakeFiles/TinyHttpd.dir/http.c.o
+
+
+CMakeFiles/TinyHttpd.dir/http_request.c.o: CMakeFiles/TinyHttpd.dir/flags.make
+CMakeFiles/TinyHttpd.dir/http_request.c.o: ../http_request.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/TinyHttpd.dir/http_request.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/TinyHttpd.dir/http_request.c.o   -c /Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/http_request.c
+
+CMakeFiles/TinyHttpd.dir/http_request.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TinyHttpd.dir/http_request.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/http_request.c > CMakeFiles/TinyHttpd.dir/http_request.c.i
+
+CMakeFiles/TinyHttpd.dir/http_request.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TinyHttpd.dir/http_request.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/http_request.c -o CMakeFiles/TinyHttpd.dir/http_request.c.s
+
+CMakeFiles/TinyHttpd.dir/http_request.c.o.requires:
+
+.PHONY : CMakeFiles/TinyHttpd.dir/http_request.c.o.requires
+
+CMakeFiles/TinyHttpd.dir/http_request.c.o.provides: CMakeFiles/TinyHttpd.dir/http_request.c.o.requires
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/http_request.c.o.provides.build
+.PHONY : CMakeFiles/TinyHttpd.dir/http_request.c.o.provides
+
+CMakeFiles/TinyHttpd.dir/http_request.c.o.provides.build: CMakeFiles/TinyHttpd.dir/http_request.c.o
+
+
+CMakeFiles/TinyHttpd.dir/epoll.c.o: CMakeFiles/TinyHttpd.dir/flags.make
+CMakeFiles/TinyHttpd.dir/epoll.c.o: ../epoll.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/TinyHttpd.dir/epoll.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/TinyHttpd.dir/epoll.c.o   -c /Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/epoll.c
+
+CMakeFiles/TinyHttpd.dir/epoll.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TinyHttpd.dir/epoll.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/epoll.c > CMakeFiles/TinyHttpd.dir/epoll.c.i
+
+CMakeFiles/TinyHttpd.dir/epoll.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TinyHttpd.dir/epoll.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/epoll.c -o CMakeFiles/TinyHttpd.dir/epoll.c.s
+
+CMakeFiles/TinyHttpd.dir/epoll.c.o.requires:
+
+.PHONY : CMakeFiles/TinyHttpd.dir/epoll.c.o.requires
+
+CMakeFiles/TinyHttpd.dir/epoll.c.o.provides: CMakeFiles/TinyHttpd.dir/epoll.c.o.requires
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/epoll.c.o.provides.build
+.PHONY : CMakeFiles/TinyHttpd.dir/epoll.c.o.provides
+
+CMakeFiles/TinyHttpd.dir/epoll.c.o.provides.build: CMakeFiles/TinyHttpd.dir/epoll.c.o
+
+
 # Object files for target TinyHttpd
 TinyHttpd_OBJECTS = \
 "CMakeFiles/TinyHttpd.dir/main.c.o" \
 "CMakeFiles/TinyHttpd.dir/Rio.c.o" \
 "CMakeFiles/TinyHttpd.dir/util.c.o" \
 "CMakeFiles/TinyHttpd.dir/priority_queue.c.o" \
-"CMakeFiles/TinyHttpd.dir/threadpool.c.o"
+"CMakeFiles/TinyHttpd.dir/threadpool.c.o" \
+"CMakeFiles/TinyHttpd.dir/http.c.o" \
+"CMakeFiles/TinyHttpd.dir/http_request.c.o" \
+"CMakeFiles/TinyHttpd.dir/epoll.c.o"
 
 # External object files for target TinyHttpd
 TinyHttpd_EXTERNAL_OBJECTS =
@@ -193,9 +268,12 @@ TinyHttpd: CMakeFiles/TinyHttpd.dir/Rio.c.o
 TinyHttpd: CMakeFiles/TinyHttpd.dir/util.c.o
 TinyHttpd: CMakeFiles/TinyHttpd.dir/priority_queue.c.o
 TinyHttpd: CMakeFiles/TinyHttpd.dir/threadpool.c.o
+TinyHttpd: CMakeFiles/TinyHttpd.dir/http.c.o
+TinyHttpd: CMakeFiles/TinyHttpd.dir/http_request.c.o
+TinyHttpd: CMakeFiles/TinyHttpd.dir/epoll.c.o
 TinyHttpd: CMakeFiles/TinyHttpd.dir/build.make
 TinyHttpd: CMakeFiles/TinyHttpd.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable TinyHttpd"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable TinyHttpd"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TinyHttpd.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -208,6 +286,9 @@ CMakeFiles/TinyHttpd.dir/requires: CMakeFiles/TinyHttpd.dir/Rio.c.o.requires
 CMakeFiles/TinyHttpd.dir/requires: CMakeFiles/TinyHttpd.dir/util.c.o.requires
 CMakeFiles/TinyHttpd.dir/requires: CMakeFiles/TinyHttpd.dir/priority_queue.c.o.requires
 CMakeFiles/TinyHttpd.dir/requires: CMakeFiles/TinyHttpd.dir/threadpool.c.o.requires
+CMakeFiles/TinyHttpd.dir/requires: CMakeFiles/TinyHttpd.dir/http.c.o.requires
+CMakeFiles/TinyHttpd.dir/requires: CMakeFiles/TinyHttpd.dir/http_request.c.o.requires
+CMakeFiles/TinyHttpd.dir/requires: CMakeFiles/TinyHttpd.dir/epoll.c.o.requires
 
 .PHONY : CMakeFiles/TinyHttpd.dir/requires
 
