@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/TinyHttpd.dir/Rio.c.o"
   "CMakeFiles/TinyHttpd.dir/util.c.o"
   "CMakeFiles/TinyHttpd.dir/priority_queue.c.o"
+  "CMakeFiles/TinyHttpd.dir/threadpool.c.o"
   "TinyHttpd.pdb"
   "TinyHttpd"
 )

@@ -204,6 +204,33 @@ priority_queue.c.s:
 	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/priority_queue.c.s
 .PHONY : priority_queue.c.s
 
+threadpool.o: threadpool.c.o
+
+.PHONY : threadpool.o
+
+# target to build an object file
+threadpool.c.o:
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/threadpool.c.o
+.PHONY : threadpool.c.o
+
+threadpool.i: threadpool.c.i
+
+.PHONY : threadpool.i
+
+# target to preprocess a source file
+threadpool.c.i:
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/threadpool.c.i
+.PHONY : threadpool.c.i
+
+threadpool.s: threadpool.c.s
+
+.PHONY : threadpool.s
+
+# target to generate assembly for a file
+threadpool.c.s:
+	$(MAKE) -f CMakeFiles/TinyHttpd.dir/build.make CMakeFiles/TinyHttpd.dir/threadpool.c.s
+.PHONY : threadpool.c.s
+
 util.o: util.c.o
 
 .PHONY : util.o
@@ -249,6 +276,9 @@ help:
 	@echo "... priority_queue.o"
 	@echo "... priority_queue.i"
 	@echo "... priority_queue.s"
+	@echo "... threadpool.o"
+	@echo "... threadpool.i"
+	@echo "... threadpool.s"
 	@echo "... util.o"
 	@echo "... util.i"
 	@echo "... util.s"

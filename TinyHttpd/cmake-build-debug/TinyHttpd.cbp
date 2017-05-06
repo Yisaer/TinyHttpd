@@ -103,6 +103,12 @@
 		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/priority_queue.h">
 			<Option target="TinyHttpd"/>
 		</Unit>
+		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/threadpool.c">
+			<Option target="TinyHttpd"/>
+		</Unit>
+		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/threadpool.h">
+			<Option target="TinyHttpd"/>
+		</Unit>
 		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/util.c">
 			<Option target="TinyHttpd"/>
 		</Unit>
