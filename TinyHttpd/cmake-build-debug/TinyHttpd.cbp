@@ -8,135 +8,137 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug"/>
+				<Option working_dir="/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug"/>
+				<Option working_dir="/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug"/>
+				<Option working_dir="/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TinyHttpd">
-				<Option output="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/TinyHttpd" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug"/>
+				<Option output="/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/TinyHttpd" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 TinyHttpd"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 TinyHttpd"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TinyHttpd/fast">
-				<Option output="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/TinyHttpd" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug"/>
+				<Option output="/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/TinyHttpd" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 TinyHttpd/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 TinyHttpd/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/Rio.c">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/Rio.c">
 			<Option target="TinyHttpd"/>
 		</Unit>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/Rio.h">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/Rio.h">
 			<Option target="TinyHttpd"/>
 		</Unit>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/dbg.h">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/dbg.h">
 			<Option target="TinyHttpd"/>
 		</Unit>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/epoll.c">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/epoll.c">
 			<Option target="TinyHttpd"/>
 		</Unit>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/epoll.h">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/epoll.h">
 			<Option target="TinyHttpd"/>
 		</Unit>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/error.h">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/error.h">
 			<Option target="TinyHttpd"/>
 		</Unit>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/http.c">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/http.c">
 			<Option target="TinyHttpd"/>
 		</Unit>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/http.h">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/http.h">
 			<Option target="TinyHttpd"/>
 		</Unit>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/http_request.c">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/http_request.c">
 			<Option target="TinyHttpd"/>
 		</Unit>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/http_request.h">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/http_request.h">
 			<Option target="TinyHttpd"/>
 		</Unit>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/list.h">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/list.h">
 			<Option target="TinyHttpd"/>
 		</Unit>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/main.c">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/main.c">
 			<Option target="TinyHttpd"/>
 		</Unit>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/priority_queue.c">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/priority_queue.c">
 			<Option target="TinyHttpd"/>
 		</Unit>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/priority_queue.h">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/priority_queue.h">
 			<Option target="TinyHttpd"/>
 		</Unit>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/threadpool.c">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/threadpool.c">
 			<Option target="TinyHttpd"/>
 		</Unit>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/threadpool.h">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/threadpool.h">
 			<Option target="TinyHttpd"/>
 		</Unit>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/util.c">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/util.c">
 			<Option target="TinyHttpd"/>
 		</Unit>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/util.h">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/util.h">
 			<Option target="TinyHttpd"/>
 		</Unit>
-		<Unit filename="/Users/Yisa/Desktop/github/TinyHttpd/TinyHttpd/CMakeLists.txt">
+		<Unit filename="/home/gaosong/Github/TinyHttpd/TinyHttpd/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

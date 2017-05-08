@@ -12,7 +12,7 @@
 int Y_epoll_create(int flags);
 void Y_epoll_add(int epfd,int fs,struct epoll_event * event);
 void Y_epoll_mod(int epfd,int fs,struct epoll_event * event);
-void Y_epoll_def(int epfd,int fs,struct epoll_event * event);
+void Y_epoll_del(int epfd,int fs,struct epoll_event * event);
 int Y_epoll_wait(int epfd ,struct epoll_event *events ,int maxevents ,int timeout);
 
 
