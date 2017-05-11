@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 3.7)
-project(TinyHttpd)
+cmake_minimum_required (VERSION 2.6)
+project (zaver)
 
-set(CMAKE_C_STANDARD 99)
-
-set(SOURCE_FILES main.c Rio.c Rio.h dbg.h error.h util.c util.h priority_queue.c priority_queue.h threadpool.c threadpool.h http.c http.h list.h http_request.c http_request.h epoll.c epoll.h)
-add_executable(TinyHttpd ${SOURCE_FILES})
+file(GLOB SOURCES "src/*.c")
+set(CMAKE_C_FLAGS ${CMAKE_C_FLAGS} "-g -O2 -Wall -Werror -Wextra -pthread -DNDEBUG")
+add_executable(serve ${SOURCES})
+add_subdirectory(tests)

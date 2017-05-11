@@ -1,0 +1,4 @@
+/home/gaosong/Github/TinyHttpd/TinyHttpd/build/tests/CMakeFiles/list_test.dir
+/home/gaosong/Github/TinyHttpd/TinyHttpd/build/tests/CMakeFiles/priority_queue_test.dir
+/home/gaosong/Github/TinyHttpd/TinyHttpd/build/CMakeFiles/serve.dir
+/home/gaosong/Github/TinyHttpd/TinyHttpd/build/tests/CMakeFiles/thread_pool_test.dir

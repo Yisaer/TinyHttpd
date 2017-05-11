@@ -1,3 +1,0 @@
-/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/gaosong/Github/TinyHttpd/TinyHttpd/cmake-build-debug/CMakeFiles/TinyHttpd.dir
