@@ -13,7 +13,7 @@
 #include "epoll.h"
 #include "threadpool.h"
 
-#define CONF "zaver.conf"
+#define CONF "conf.conf"
 #define PROGRAM_VERSION "0.1"
 
 extern struct epoll_event *events;
@@ -28,8 +28,8 @@ static const struct option long_options[]=
 
 static void usage() {
    fprintf(stderr,
-	"zaver [option]... \n"
-	"  -c|--conf <config file>  Specify config file. Default ./zaver.conf.\n"
+	"conf [option]... \n"
+	"  -c|--conf <config file>  Specify config file. Default ./conf.conf.\n"
 	"  -?|-h|--help             This information.\n"
 	"  -V|--version             Display program version.\n"
 	);
@@ -138,7 +138,7 @@ int main(int argc, char* argv[]) {
      */
     zv_timer_init();
 
-    log_info("zaver started.");
+    log_info("serve started.");
     int n;
     int i, fd;
     int time;
