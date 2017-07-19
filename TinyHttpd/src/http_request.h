@@ -6,26 +6,26 @@
 #include <time.h>
 #include "http.h"
 
-#define ZV_AGAIN    EAGAIN
+#define AGAIN    EAGAIN
 
-#define ZV_HTTP_PARSE_INVALID_METHOD        10
-#define ZV_HTTP_PARSE_INVALID_REQUEST       11
-#define ZV_HTTP_PARSE_INVALID_HEADER        12
+#define HTTP_PARSE_INVALID_METHOD        10
+#define HTTP_PARSE_INVALID_REQUEST       11
+#define HTTP_PARSE_INVALID_HEADER        12
 
-#define ZV_HTTP_UNKNOWN                     0x0001
-#define ZV_HTTP_GET                         0x0002
-#define ZV_HTTP_HEAD                        0x0004
-#define ZV_HTTP_POST                        0x0008
+#define HTTP_UNKNOWN                     0x0001
+#define HTTP_GET                         0x0002
+#define HTTP_HEAD                        0x0004
+#define HTTP_POST                        0x0008
 
-#define ZV_HTTP_OK                          200
+#define HTTP_OK                          200
 
-#define ZV_HTTP_NOT_MODIFIED                304
+#define HTTP_NOT_MODIFIED                304
 
-#define ZV_HTTP_NOT_FOUND                   404
+#define HTTP_NOT_FOUND                   404
 
 #define MAX_BUF 8124
 
-typedef struct zv_http_request_s {
+typedef struct http_request_s {
     void *root;
     int fd;
     int epfd;
@@ -52,7 +52,7 @@ typedef struct zv_http_request_s {
     void *cur_header_value_end;
 
     void *timer;
-} zv_http_request_t;
+} http_request_t;
 
 typedef struct {
     int fd;
@@ -61,33 +61,33 @@ typedef struct {
     int modified;       /* compare If-modified-since field with mtime to decide whether the file is modified since last time*/
 
     int status;
-} zv_http_out_t;
+} http_out_t;
 
-typedef struct zv_http_header_s {
+typedef struct http_header_s {
     void *key_start, *key_end;          /* not include end */
     void *value_start, *value_end;
     list_head list;
-} zv_http_header_t;
+} http_header_t;
 
-typedef int (*zv_http_header_handler_pt)(zv_http_request_t *r, zv_http_out_t *o, char *data, int len);
+typedef int (*http_header_handler_pt)(http_request_t *r, http_out_t *o, char *data, int len);
 
 typedef struct {
     char *name;
-    zv_http_header_handler_pt handler;
-} zv_http_header_handle_t;
+    http_header_handler_pt handler;
+} http_header_handle_t;
 
-void zv_http_handle_header(zv_http_request_t *r, zv_http_out_t *o);
-int zv_http_close_conn(zv_http_request_t *r);
+void http_handle_header(http_request_t *r, http_out_t *o);
+int http_close_conn(http_request_t *r);
 
-int zv_init_request_t(zv_http_request_t *r, int fd, int epfd, zv_conf_t *cf);
-int zv_free_request_t(zv_http_request_t *r);
+int init_request_t(http_request_t *r, int fd, int epfd, conf_t *cf);
+int free_request_t(http_request_t *r);
 
-int zv_init_out_t(zv_http_out_t *o, int fd);
-int zv_free_out_t(zv_http_out_t *o);
+int init_out_t(http_out_t *o, int fd);
+int free_out_t(http_out_t *o);
 
 const char *get_shortmsg_from_status_code(int status_code);
 
-extern zv_http_header_handle_t     zv_http_headers_in[];
+extern http_header_handle_t     http_headers_in[];
 
 #endif
 

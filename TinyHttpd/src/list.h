@@ -1,7 +1,7 @@
 
 
-#ifndef ZV_LIST_H
-#define ZV_LIST_H
+#ifndef LIST_H
+#define LIST_H
 
 #ifndef NULL
 #define NULL 0

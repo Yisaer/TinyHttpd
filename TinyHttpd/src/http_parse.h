@@ -7,7 +7,7 @@
 #define LF '\n'
 #define CRLFCRLF "\r\n\r\n"
 
-int zv_http_parse_request_line(zv_http_request_t *r);
-int zv_http_parse_request_body(zv_http_request_t *r);
+int http_parse_request_line(http_request_t *r);
+int http_parse_request_body(http_request_t *r);
 
 #endif

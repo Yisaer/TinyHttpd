@@ -17,7 +17,7 @@
 static const char* get_file_type(const char *type);
 static void parse_uri(char *uri, int length, char *filename, char *querystring);
 static void do_error(int fd, char *cause, char *errnum, char *shortmsg, char *longmsg);
-static void serve_static(int fd, char *filename, size_t filesize, zv_http_out_t *out);
+static void serve_static(int fd, char *filename, size_t filesize, http_out_t *out);
 static char *ROOT = NULL;
 
 mime_type_t zaver_mime[] = 
@@ -44,7 +44,7 @@ mime_type_t zaver_mime[] =
 };
 
 void do_request(void *ptr) {
-    zv_http_request_t *r = (zv_http_request_t *)ptr;
+    http_request_t *r = (http_request_t *)ptr;
     int fd = r->fd;
     int rc, n;
     char filename[SHORTLINE];
@@ -53,7 +53,7 @@ void do_request(void *ptr) {
     char *plast = NULL;
     size_t remain_size;
     
-    zv_del_timer(r);
+    del_timer(r);
     for(;;) {
         plast = &r->buf[r->last % MAX_BUF];
         remain_size = MIN(MAX_BUF - (r->last - r->pos) - 1, MAX_BUF - r->last % MAX_BUF);
@@ -79,11 +79,11 @@ void do_request(void *ptr) {
         check(r->last - r->pos < MAX_BUF, "request buffer overflow!");
         
         log_info("ready to parse request line"); 
-        rc = zv_http_parse_request_line(r);
-        if (rc == ZV_AGAIN) {
+        rc = http_parse_request_line(r);
+        if (rc == AGAIN) {
             continue;
-        } else if (rc != ZV_OK) {
-            log_err("rc != ZV_OK");
+        } else if (rc != OK) {
+            log_err("rc != OK");
             goto err;
         }
 
@@ -91,25 +91,25 @@ void do_request(void *ptr) {
         log_info("uri == %.*s", (int)(r->uri_end - r->uri_start), (char *)r->uri_start);
 
         debug("ready to parse request body");
-        rc = zv_http_parse_request_body(r);
-        if (rc == ZV_AGAIN) {
+        rc = http_parse_request_body(r);
+        if (rc == AGAIN) {
             continue;
-        } else if (rc != ZV_OK) {
-            log_err("rc != ZV_OK");
+        } else if (rc != OK) {
+            log_err("rc != OK");
             goto err;
         }
         
         /*
         *   handle http header
         */
-        zv_http_out_t *out = (zv_http_out_t *)malloc(sizeof(zv_http_out_t));
+        http_out_t *out = (http_out_t *)malloc(sizeof(http_out_t));
         if (out == NULL) {
-            log_err("no enough space for zv_http_out_t");
+            log_err("no enough space for http_out_t");
             exit(1);
         }
 
-        rc = zv_init_out_t(out, fd);
-        check(rc == ZV_OK, "zv_init_out_t");
+        rc = init_out_t(out, fd);
+        check(rc == OK, "init_out_t");
 
         parse_uri(r->uri_start, r->uri_end - r->uri_start, filename, NULL);
 
@@ -127,11 +127,11 @@ void do_request(void *ptr) {
         
         out->mtime = sbuf.st_mtime;
 
-        zv_http_handle_header(r, out);
+        http_handle_header(r, out);
         check(list_empty(&(r->list)) == 1, "header list should be empty");
         
         if (out->status == 0) {
-            out->status = ZV_HTTP_OK;
+            out->status = HTTP_OK;
         }
 
         serve_static(fd, filename, sbuf.st_size, out);
@@ -149,14 +149,14 @@ void do_request(void *ptr) {
     event.data.ptr = ptr;
     event.events = EPOLLIN | EPOLLET | EPOLLONESHOT;
 
-    zv_epoll_mod(r->epfd, r->fd, &event);
-    zv_add_timer(r, TIMEOUT_DEFAULT, zv_http_close_conn);
+    epoll_mod(r->epfd, r->fd, &event);
+    add_timer(r, TIMEOUT_DEFAULT, http_close_conn);
     return;
 
 err:
 close:
-    rc = zv_http_close_conn(r);
-    check(rc == 0, "do_request: zv_http_close_conn");
+    rc = http_close_conn(r);
+    check(rc == 0, "do_request: http_close_conn");
 }
 
 static void parse_uri(char *uri, int uri_length, char *filename, char *querystring) {
@@ -224,7 +224,7 @@ static void do_error(int fd, char *cause, char *errnum, char *shortmsg, char *lo
     return;
 }
 
-static void serve_static(int fd, char *filename, size_t filesize, zv_http_out_t *out) {
+static void serve_static(int fd, char *filename, size_t filesize, http_out_t *out) {
     char header[MAXLINE];
     char buf[SHORTLINE];
     size_t n;

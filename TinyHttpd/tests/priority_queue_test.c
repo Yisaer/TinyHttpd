@@ -14,44 +14,44 @@ size_t resultdata[] = {11, 24, 46, 48, 64, 72, 78, 89, 100, 106, 110, 112, 121, 
 
 
 int main() {
-    zv_pq_t pq;
+    pq_t pq;
     int rc;
 
-    rc = zv_pq_init(&pq, comp, ZV_PQ_DEFAULT_SIZE);
-    check_exit(rc == 0, "zv_pq_init error");
+    rc = pq_init(&pq, comp, PQ_DEFAULT_SIZE);
+    check_exit(rc == 0, "pq_init error");
 
-    rc = zv_pq_is_empty(&pq);
-    check_exit(rc == 1, "zv_pq_is_empty error");
+    rc = pq_is_empty(&pq);
+    check_exit(rc == 1, "pq_is_empty error");
 
     size_t sz;
-    sz = zv_pq_size(&pq);
-    check_exit(sz == 0, "zv_pq_size");
+    sz = pq_size(&pq);
+    check_exit(sz == 0, "pq_size");
 
     void *min;
-    min = zv_pq_min(&pq);
-    check_exit(min == NULL, "zv_pq_min");
+    min = pq_min(&pq);
+    check_exit(min == NULL, "pq_min");
 
-    rc = zv_pq_delmin(&pq);
-    check_exit(rc == 0, "zv_pq_delmin error");
+    rc = pq_delmin(&pq);
+    check_exit(rc == 0, "pq_delmin error");
 
     int n = sizeof(testdata)/sizeof(size_t);
     int i;
     for (i = 0; i < n; i++) {
-        rc = zv_pq_insert(&pq, (void *)testdata[i]);
-        check_exit(rc == 0, "zv_pq_insert error");
+        rc = pq_insert(&pq, (void *)testdata[i]);
+        check_exit(rc == 0, "pq_insert error");
         
-        check_exit(zv_pq_size(&pq) == (size_t)i+1, "zv_pq_size error");
+        check_exit(pq_size(&pq) == (size_t)i+1, "pq_size error");
     }
 
     i = 0;
-    while (!zv_pq_is_empty(&pq)) {
-        min = zv_pq_min(&pq);
-        check_exit(min != NULL, "zv_pq_min error");
-        check_exit((size_t)min == (size_t)resultdata[i], "zv_pq_min error, min=%zu, rd[i]=%zu", (size_t)min, (size_t)resultdata[i]);
+    while (!pq_is_empty(&pq)) {
+        min = pq_min(&pq);
+        check_exit(min != NULL, "pq_min error");
+        check_exit((size_t)min == (size_t)resultdata[i], "pq_min error, min=%zu, rd[i]=%zu", (size_t)min, (size_t)resultdata[i]);
         i++;
 
-        rc = zv_pq_delmin(&pq);
-        check_exit(rc == 0, "zv_pq_delmin error");
+        rc = pq_delmin(&pq);
+        check_exit(rc == 0, "pq_delmin error");
     }
 
     check_exit(i == n, "size not match");

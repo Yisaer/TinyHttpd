@@ -81,9 +81,9 @@ int main(int argc, char* argv[]) {
     * read confile file
     */
     char conf_buf[BUFLEN];
-    zv_conf_t cf;
+    conf_t cf;
     rc = read_conf(conf_file, &cf, conf_buf, BUFLEN);
-    check(rc == ZV_CONF_OK, "read conf err");
+    check(rc == CONF_OK, "read conf err");
 
     /*
     *   install signal handle for SIGPIPE
@@ -115,28 +115,28 @@ int main(int argc, char* argv[]) {
     /*
     * create epoll and add listenfd to ep
     */
-    int epfd = zv_epoll_create(0);
+    int epfd = epoll_create(0);
     struct epoll_event event;
     
-    zv_http_request_t *request = (zv_http_request_t *)malloc(sizeof(zv_http_request_t));
-    zv_init_request_t(request, listenfd, epfd, &cf);
+    http_request_t *request = (http_request_t *)malloc(sizeof(http_request_t));
+    init_request_t(request, listenfd, epfd, &cf);
 
     event.data.ptr = (void *)request;
     event.events = EPOLLIN | EPOLLET;
-    zv_epoll_add(epfd, listenfd, &event);
+    epoll_add(epfd, listenfd, &event);
 
     /*
     * create thread pool
     */
     /*
-    zv_threadpool_t *tp = threadpool_init(cf.thread_num);
+    threadpool_t *tp = threadpool_init(cf.thread_num);
     check(tp != NULL, "threadpool_init error");
     */
     
     /*
      * initialize timer
      */
-    zv_timer_init();
+    timer_init();
 
     log_info("serve started.");
     int n;
@@ -145,13 +145,13 @@ int main(int argc, char* argv[]) {
 
     /* epoll_wait loop */
     while (1) {
-        time = zv_find_timer();
+        time = find_timer();
         debug("wait time = %d", time);
-        n = zv_epoll_wait(epfd, events, MAXEVENTS, time);
-        zv_handle_expire_timers();
+        n = epoll_wait(epfd, events, MAXEVENTS, time);
+        handle_expire_timers();
         
         for (i = 0; i < n; i++) {
-            zv_http_request_t *r = (zv_http_request_t *)events[i].data.ptr;
+            http_request_t *r = (http_request_t *)events[i].data.ptr;
             fd = r->fd;
             
             if (listenfd == fd) {
@@ -174,18 +174,18 @@ int main(int argc, char* argv[]) {
                     check(rc == 0, "make_socket_non_blocking");
                     log_info("new connection fd %d", infd);
                     
-                    zv_http_request_t *request = (zv_http_request_t *)malloc(sizeof(zv_http_request_t));
+                    http_request_t *request = (http_request_t *)malloc(sizeof(http_request_t));
                     if (request == NULL) {
-                        log_err("malloc(sizeof(zv_http_request_t))");
+                        log_err("malloc(sizeof(http_request_t))");
                         break;
                     }
 
-                    zv_init_request_t(request, infd, epfd, &cf);
+                    init_request_t(request, infd, epfd, &cf);
                     event.data.ptr = (void *)request;
                     event.events = EPOLLIN | EPOLLET | EPOLLONESHOT;
 
-                    zv_epoll_add(epfd, infd, &event);
-                    zv_add_timer(request, TIMEOUT_DEFAULT, zv_http_close_conn);
+                    epoll_add(epfd, infd, &event);
+                    add_timer(request, TIMEOUT_DEFAULT, http_close_conn);
                 }   // end of while of accept
 
             } else {

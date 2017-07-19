@@ -10,21 +10,21 @@
 
 #define DELIM       "="
 
-#define ZV_CONF_OK      0
-#define ZV_CONF_ERROR   100
+#define CONF_OK      0
+#define CONF_ERROR   100
 
 #define MIN(a,b) ((a) < (b) ? (a) : (b))
 
-struct zv_conf_s {
+struct conf_s {
     void *root;
     int port;
     int thread_num;
 };
 
-typedef struct zv_conf_s zv_conf_t;
+typedef struct conf_s conf_t;
 
 int open_listenfd(int port);
 int make_socket_non_blocking(int fd);
 
-int read_conf(char *filename, zv_conf_t *cf, char *buf, int len);
+int read_conf(char *filename, conf_t *cf, char *buf, int len);
 #endif

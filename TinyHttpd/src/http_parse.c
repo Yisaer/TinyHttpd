@@ -3,7 +3,7 @@
 #include "http_parse.h"
 #include "error.h"
 
-int zv_http_parse_request_line(zv_http_request_t *r) {
+int http_parse_request_line(http_request_t *r) {
     u_char ch, *p, *m;
     size_t pi;
 
@@ -43,7 +43,7 @@ int zv_http_parse_request_line(zv_http_request_t *r) {
             }
 
             if ((ch < 'A' || ch > 'Z') && ch != '_') {
-                return ZV_HTTP_PARSE_INVALID_METHOD;
+                return HTTP_PARSE_INVALID_METHOD;
             }
 
             state = sw_method;
@@ -57,27 +57,27 @@ int zv_http_parse_request_line(zv_http_request_t *r) {
                 switch (p - m) {
 
                 case 3:
-                    if (zv_str3_cmp(m, 'G', 'E', 'T', ' ')) {
-                        r->method = ZV_HTTP_GET;
+                    if (str3_cmp(m, 'G', 'E', 'T', ' ')) {
+                        r->method = HTTP_GET;
                         break;
                     }
 
                     break;
 
                 case 4:
-                    if (zv_str3Ocmp(m, 'P', 'O', 'S', 'T')) {
-                        r->method = ZV_HTTP_POST;
+                    if (str3Ocmp(m, 'P', 'O', 'S', 'T')) {
+                        r->method = HTTP_POST;
                         break;
                     }
 
-                    if (zv_str4cmp(m, 'H', 'E', 'A', 'D')) {
-                        r->method = ZV_HTTP_HEAD;
+                    if (str4cmp(m, 'H', 'E', 'A', 'D')) {
+                        r->method = HTTP_HEAD;
                         break;
                     }
 
                     break;
                 default:
-                    r->method = ZV_HTTP_UNKNOWN;
+                    r->method = HTTP_UNKNOWN;
                     break;
                 }
                 state = sw_spaces_before_uri;
@@ -85,7 +85,7 @@ int zv_http_parse_request_line(zv_http_request_t *r) {
             }
 
             if ((ch < 'A' || ch > 'Z') && ch != '_') {
-                return ZV_HTTP_PARSE_INVALID_METHOD;
+                return HTTP_PARSE_INVALID_METHOD;
             }
 
             break;
@@ -103,7 +103,7 @@ int zv_http_parse_request_line(zv_http_request_t *r) {
                 case ' ':
                     break;
                 default:
-                    return ZV_HTTP_PARSE_INVALID_REQUEST;
+                    return HTTP_PARSE_INVALID_REQUEST;
             }
             break;
 
@@ -128,7 +128,7 @@ int zv_http_parse_request_line(zv_http_request_t *r) {
                 state = sw_http_H;
                 break;
             default:
-                return ZV_HTTP_PARSE_INVALID_REQUEST;
+                return HTTP_PARSE_INVALID_REQUEST;
             }
             break;
 
@@ -138,7 +138,7 @@ int zv_http_parse_request_line(zv_http_request_t *r) {
                 state = sw_http_HT;
                 break;
             default:
-                return ZV_HTTP_PARSE_INVALID_REQUEST;
+                return HTTP_PARSE_INVALID_REQUEST;
             }
             break;
 
@@ -148,7 +148,7 @@ int zv_http_parse_request_line(zv_http_request_t *r) {
                 state = sw_http_HTT;
                 break;
             default:
-                return ZV_HTTP_PARSE_INVALID_REQUEST;
+                return HTTP_PARSE_INVALID_REQUEST;
             }
             break;
 
@@ -158,7 +158,7 @@ int zv_http_parse_request_line(zv_http_request_t *r) {
                 state = sw_http_HTTP;
                 break;
             default:
-                return ZV_HTTP_PARSE_INVALID_REQUEST;
+                return HTTP_PARSE_INVALID_REQUEST;
             }
             break;
 
@@ -168,14 +168,14 @@ int zv_http_parse_request_line(zv_http_request_t *r) {
                 state = sw_first_major_digit;
                 break;
             default:
-                return ZV_HTTP_PARSE_INVALID_REQUEST;
+                return HTTP_PARSE_INVALID_REQUEST;
             }
             break;
 
         /* first digit of major HTTP version */
         case sw_first_major_digit:
             if (ch < '1' || ch > '9') {
-                return ZV_HTTP_PARSE_INVALID_REQUEST;
+                return HTTP_PARSE_INVALID_REQUEST;
             }
 
             r->http_major = ch - '0';
@@ -190,7 +190,7 @@ int zv_http_parse_request_line(zv_http_request_t *r) {
             }
 
             if (ch < '0' || ch > '9') {
-                return ZV_HTTP_PARSE_INVALID_REQUEST;
+                return HTTP_PARSE_INVALID_REQUEST;
             }
 
             r->http_major = r->http_major * 10 + ch - '0';
@@ -199,7 +199,7 @@ int zv_http_parse_request_line(zv_http_request_t *r) {
         /* first digit of minor HTTP version */
         case sw_first_minor_digit:
             if (ch < '0' || ch > '9') {
-                return ZV_HTTP_PARSE_INVALID_REQUEST;
+                return HTTP_PARSE_INVALID_REQUEST;
             }
 
             r->http_minor = ch - '0';
@@ -223,7 +223,7 @@ int zv_http_parse_request_line(zv_http_request_t *r) {
             }
 
             if (ch < '0' || ch > '9') {
-                return ZV_HTTP_PARSE_INVALID_REQUEST;
+                return HTTP_PARSE_INVALID_REQUEST;
             }
 
             r->http_minor = r->http_minor * 10 + ch - '0';
@@ -239,7 +239,7 @@ int zv_http_parse_request_line(zv_http_request_t *r) {
             case LF:
                 goto done;
             default:
-                return ZV_HTTP_PARSE_INVALID_REQUEST;
+                return HTTP_PARSE_INVALID_REQUEST;
             }
             break;
 
@@ -250,7 +250,7 @@ int zv_http_parse_request_line(zv_http_request_t *r) {
             case LF:
                 goto done;
             default:
-                return ZV_HTTP_PARSE_INVALID_REQUEST;
+                return HTTP_PARSE_INVALID_REQUEST;
             }
         }
     }
@@ -258,7 +258,7 @@ int zv_http_parse_request_line(zv_http_request_t *r) {
     r->pos = pi;
     r->state = state;
 
-    return ZV_AGAIN;
+    return AGAIN;
 
 done:
 
@@ -270,10 +270,10 @@ done:
 
     r->state = sw_start;
 
-    return ZV_OK;
+    return OK;
 }
 
-int zv_http_parse_request_body(zv_http_request_t *r) {
+int http_parse_request_body(http_request_t *r) {
     u_char ch, *p;
     size_t pi;
 
@@ -293,7 +293,7 @@ int zv_http_parse_request_body(zv_http_request_t *r) {
 
     //log_info("ready to parese request body, start = %d, last= %d", r->pos, r->last);
 
-    zv_http_header_t *hd; 
+    http_header_t *hd; 
     for (pi = r->pos; pi < r->last; pi++) {
         p = (u_char *)&r->buf[pi % MAX_BUF];
         ch = *p;
@@ -328,7 +328,7 @@ int zv_http_parse_request_body(zv_http_request_t *r) {
                 state = sw_spaces_after_colon;
                 break;
             } else {
-                return ZV_HTTP_PARSE_INVALID_HEADER;
+                return HTTP_PARSE_INVALID_HEADER;
             }
         case sw_spaces_after_colon:
             if (ch == ' ') {
@@ -354,7 +354,7 @@ int zv_http_parse_request_body(zv_http_request_t *r) {
             if (ch == LF) {
                 state = sw_crlf;
                 // save the current http header
-                hd = (zv_http_header_t *)malloc(sizeof(zv_http_header_t));
+                hd = (http_header_t *)malloc(sizeof(http_header_t));
                 hd->key_start   = r->cur_header_key_start;
                 hd->key_end     = r->cur_header_key_end;
                 hd->value_start = r->cur_header_value_start;
@@ -364,7 +364,7 @@ int zv_http_parse_request_body(zv_http_request_t *r) {
 
                 break;
             } else {
-                return ZV_HTTP_PARSE_INVALID_HEADER;
+                return HTTP_PARSE_INVALID_HEADER;
             }
 
         case sw_crlf:
@@ -381,7 +381,7 @@ int zv_http_parse_request_body(zv_http_request_t *r) {
             case LF:
                 goto done;
             default:
-                return ZV_HTTP_PARSE_INVALID_HEADER;
+                return HTTP_PARSE_INVALID_HEADER;
             }
             break;
         }   
@@ -390,12 +390,12 @@ int zv_http_parse_request_body(zv_http_request_t *r) {
     r->pos = pi;
     r->state = state;
 
-    return ZV_AGAIN;
+    return AGAIN;
 
 done:
     r->pos = pi + 1;
 
     r->state = sw_start;
 
-    return ZV_OK;
+    return OK;
 }

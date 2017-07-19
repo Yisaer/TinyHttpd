@@ -22,7 +22,7 @@ int main() {
     int rc;
     check_exit(pthread_mutex_init(&lock, NULL) == 0, "lock init error");
 
-    zv_threadpool_t *tp = threadpool_init(THREAD_NUM);
+    threadpool_t *tp = threadpool_init(THREAD_NUM);
     check_exit(tp != NULL, "threadpool_init error");
     
     size_t i;

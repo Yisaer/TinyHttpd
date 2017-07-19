@@ -71,11 +71,11 @@ int make_socket_non_blocking(int fd) {
 * Read configuration file
 * TODO: trim input line
 */
-int read_conf(char *filename, zv_conf_t *cf, char *buf, int len) {
+int read_conf(char *filename, conf_t *cf, char *buf, int len) {
     FILE *fp = fopen(filename, "r");
     if (!fp) {
         log_err("cannot open config file: %s", filename);
-        return ZV_CONF_ERROR;
+        return CONF_ERROR;
     }
 
     int pos = 0;
@@ -91,7 +91,7 @@ int read_conf(char *filename, zv_conf_t *cf, char *buf, int len) {
         debug("read one line from conf: %s, len = %d", cur_pos, line_len);
         */
         if (!delim_pos)
-            return ZV_CONF_ERROR;
+            return CONF_ERROR;
         
         if (cur_pos[strlen(cur_pos) - 1] == '\n') {
             cur_pos[strlen(cur_pos) - 1] = '\0';
@@ -113,5 +113,5 @@ int read_conf(char *filename, zv_conf_t *cf, char *buf, int len) {
     }
 
     fclose(fp);
-    return ZV_CONF_OK;
+    return CONF_OK;
 }

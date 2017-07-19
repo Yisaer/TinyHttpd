@@ -15,37 +15,37 @@ extern "C" {
 
 #define THREAD_NUM 8
 
-typedef struct zv_task_s {
+typedef struct task_s {
     void (*func)(void *);
     void *arg;
-    struct zv_task_s *next;
-} zv_task_t;
+    struct task_s *next;
+} task_t;
 
 typedef struct {
     pthread_mutex_t lock;
     pthread_cond_t cond;
     pthread_t *threads;
-    zv_task_t *head;
+    task_t *head;
     int thread_count;
     int queue_size;
     int shutdown;
     int started;
-} zv_threadpool_t;
+} threadpool_t;
 
 typedef enum {
-    zv_tp_invalid   = -1,
-    zv_tp_lock_fail = -2,
-    zv_tp_already_shutdown  = -3,
-    zv_tp_cond_broadcast    = -4,
-    zv_tp_thread_fail       = -5,
+    tp_invalid   = -1,
+    tp_lock_fail = -2,
+    tp_already_shutdown  = -3,
+    tp_cond_broadcast    = -4,
+    tp_thread_fail       = -5,
     
-} zv_threadpool_error_t;
+} threadpool_error_t;
 
-zv_threadpool_t *threadpool_init(int thread_num);
+threadpool_t *threadpool_init(int thread_num);
 
-int threadpool_add(zv_threadpool_t *pool, void (*func)(void *), void *arg);
+int threadpool_add(threadpool_t *pool, void (*func)(void *), void *arg);
 
-int threadpool_destroy(zv_threadpool_t *pool, int gracegul);
+int threadpool_destroy(threadpool_t *pool, int gracegul);
 
 #ifdef __cplusplus
 }
